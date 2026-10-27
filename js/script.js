@@ -1,4 +1,4 @@
-// ===== Theme toggle =====
+// ===== Theme toggle (day / night) =====
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
 const savedTheme = localStorage.getItem('theme');
@@ -15,19 +15,10 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', next);
 });
 
-// ===== Nav scroll state + mobile toggle =====
-const navbar = document.getElementById('navbar');
+// ===== Mobile nav =====
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
@@ -35,9 +26,9 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ===== Typewriter hero title =====
 const typewriterEl = document.getElementById('typewriter');
 const phrases = [
-  'data_science @ drexel university',
-  'building: ml, nlp, data pipelines',
-  'status: open_to_coop == true',
+  'CLASS: COMPUTER SCIENCE',
+  'TYPE: ML / DATA / RESEARCH',
+  'STATUS: OPEN TO CO-OPS',
 ];
 let phraseIdx = 0, charIdx = 0, deleting = false;
 
@@ -59,12 +50,11 @@ function typeLoop() {
       phraseIdx = (phraseIdx + 1) % phrases.length;
     }
   }
-  setTimeout(typeLoop, deleting ? 35 : 55);
+  setTimeout(typeLoop, deleting ? 35 : 70);
 }
 typeLoop();
 
 // ===== Scroll reveal =====
-const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -73,29 +63,23 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-revealEls.forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ===== Cursor glow (desktop only) =====
-const cursorGlow = document.getElementById('cursorGlow');
-if (window.matchMedia('(min-width: 900px)').matches) {
-  window.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-  }, { passive: true });
-}
-
-// ===== Project card tilt =====
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const rotateX = ((y / rect.height) - 0.5) * -6;
-    const rotateY = ((x / rect.width) - 0.5) * 6;
-    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
+// ===== Project filter =====
+const filterButtons = document.querySelectorAll('.filter');
+const entries = document.querySelectorAll('.entry');
+const noResults = document.getElementById('noResults');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const type = btn.dataset.filter;
+    filterButtons.forEach(b => b.classList.toggle('is-active', b === btn));
+    let shown = 0;
+    entries.forEach(entry => {
+      const match = type === 'all' || entry.dataset.cat.split(' ').includes(type);
+      entry.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    noResults.hidden = shown > 0;
   });
 });
 

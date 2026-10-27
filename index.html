@@ -1,38 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdullah Shaukat — Data Science</title>
-<meta name="description" content="Abdullah Shaukat — Data Science student at Drexel University. ML, data engineering, and analytics projects.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%9A%A1</text></svg>">
+<title>Abdullah Shaukat — Computer Science & Data</title>
+<meta name="description" content="Abdullah Shaukat — Computer Science student at Drexel University (minors in Data Science & Economics). ML, data engineering, and research projects.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%23d7263d%22 stroke=%22%23111%22 stroke-width=%228%22/><circle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%233aa0ff%22 stroke=%22%23fff%22 stroke-width=%226%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="scanlines"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
-
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">~/abdullah<span class="dot">$</span></a>
+    <a href="#home" class="nav-logo" aria-label="Home">
+      <span class="lens"></span>
+      <span class="leds"><i class="led led-r"></i><i class="led led-y"></i><i class="led led-g"></i></span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about" class="nav-link">about<span class="ext">.md</span></a></li>
-      <li><a href="#projects" class="nav-link">projects<span class="ext">/</span></a></li>
-      <li><a href="#experience" class="nav-link">experience<span class="ext">.log</span></a></li>
-      <li><a href="#skills" class="nav-link">skills<span class="ext">.json</span></a></li>
-      <li><a href="#contact" class="nav-link">contact<span class="ext">.sh</span></a></li>
-      <li><a href="assets/Abdullah_Shaukat_Resume.pdf" target="_blank" class="nav-resume-btn">./resume.pdf</a></li>
-      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <li><a href="#about" class="nav-link">Trainer</a></li>
+      <li><a href="#projects" class="nav-link">Dex</a></li>
+      <li><a href="#experience" class="nav-link">Badges</a></li>
+      <li><a href="#skills" class="nav-link">Bag</a></li>
+      <li><a href="#contact" class="nav-link">Link</a></li>
+      <li><a href="assets/Abdullah_Shaukat_Resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
+      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle day and night mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button></li>
     </ul>
   </div>
@@ -40,243 +39,366 @@
 
 <main>
 
-  <!-- HERO -->
+  <!-- HERO / TRAINER CARD -->
   <section id="home" class="hero">
-    <div class="hero-content reveal">
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-          <span class="terminal-title">abdullah@drexel — zsh — 80×24</span>
+    <div class="hero-grid">
+      <div class="screen hero-screen reveal">
+        <div class="lcd-bar"><span>TRAINER CARD</span><span>ID No.062029</span></div>
+        <p class="lcd-line">&#9654; HELLO! I'M</p>
+        <h1 class="hero-name">Abdullah Shaukat</h1>
+        <h2 class="hero-title"><span class="typewriter" id="typewriter"></span><span class="cursor-blink">&#9608;</span></h2>
+        <p class="hero-desc">
+          <span class="lcd-dim"># Computer Science student at Drexel University.</span><br>
+          Passionate About AI, Analytics &amp; Social Impact.
+          Building tools that turn messy, real-world data into things people can actually use.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-red"><span class="btn-key">A</span> Enter the Dex</a>
+          <a href="assets/Abdullah_Shaukat_Resume.pdf" target="_blank" class="btn btn-blue"><span class="btn-key">B</span> Resume</a>
         </div>
-        <div class="terminal-body">
-          <p class="term-line"><span class="term-prompt">abdullah@drexel</span><span class="term-path">~</span><span class="term-dollar">$</span> whoami</p>
-          <h1 class="hero-name">Abdullah Shaukat</h1>
-
-          <p class="term-line"><span class="term-prompt">abdullah@drexel</span><span class="term-path">~</span><span class="term-dollar">$</span> cat focus.txt</p>
-          <h2 class="hero-title"><span class="typewriter" id="typewriter"></span><span class="cursor-blink">▍</span></h2>
-
-          <p class="term-line"><span class="term-prompt">abdullah@drexel</span><span class="term-path">~</span><span class="term-dollar">$</span> cat about.md</p>
-          <p class="hero-desc">
-            <span class="syn-comment"># Data Science student at Drexel University.</span><br>
-            Passionate About AI, Analytics & Social Impact.
-            Building tools that turn messy, real-world data into things people can actually use.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">./view_projects</a>
-            <a href="assets/Abdullah_Shaukat_Resume.pdf" target="_blank" class="btn btn-secondary">curl resume.pdf</a>
-          </div>
-
-          <div class="hero-social">
-            <a href="https://github.com/abdullahshaukat2" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/abdullah--shaukat" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
-            </a>
-            <a href="mailto:as6267@drexel.edu" aria-label="Email" class="social-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            </a>
-          </div>
+        <div class="hero-social">
+          <a href="https://github.com/abdullahshaukat2" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/abdullah--shaukat" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:as6267@drexel.edu" aria-label="Email" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
         </div>
       </div>
+
+      <aside class="trainer-card reveal" aria-label="Trainer summary">
+        <div class="portrait"><span>&#129489;&#8205;&#128187;</span></div>
+        <div class="tc-rows">
+          <div><b>NAME</b> ABDULLAH</div>
+          <div><b>CLASS</b> CS &rsquo;29</div>
+          <div><b>MINORS</b> DATA SCI, ECON</div>
+          <div><b>GAMES</b> RDR2, ELDEN RING</div>
+          <div><b>ANIME</b> BLEACH, NARUTO, JJK</div>
+          <div><b>BADGES</b> 3 / 8</div>
+        </div>
+        <div class="badge-row" aria-hidden="true">
+          <i class="badge b1">&#128678;</i><i class="badge b2">&#128647;</i><i class="badge b3">&#127968;</i>
+          <i class="badge empty">?</i><i class="badge empty">?</i>
+        </div>
+        <div class="dpad" aria-hidden="true"><i></i><i></i></div>
+      </aside>
     </div>
-    <div class="scroll-indicator">scroll<span class="scroll-arrow">▾</span></div>
+    <div class="scroll-indicator">SCROLL<span class="scroll-arrow">&#9662;</span></div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- TRAINER PROFILE -->
   <section id="about" class="section">
     <div class="section-inner">
-      <p class="section-eyebrow reveal">// 01 — about.md</p>
-      <h2 class="section-title reveal">Where data meets decisions</h2>
+      <p class="section-eyebrow reveal">&#9654; 01 / TRAINER PROFILE</p>
+      <h2 class="section-title reveal">About me</h2>
       <div class="about-grid">
-        <div class="about-text reveal">
+        <div class="screen dialog reveal">
           <p>
-            I'm a Data Science &amp; Economics student at Drexel University, currently researching
-            metro network dynamics under Prof. Zhiwei Chen and building side projects that push
-            further into NLP, ML, and applied data engineering.
+            I'm Abdullah Shaukat, a Computer Science student at Drexel University with minors in
+            Data Science and Economics. My work spans machine learning, data engineering, and
+            research, from reinforcement learning for traffic systems to NLP-based recommendation
+            and citation-graph search.
           </p>
           <p>
-            I like problems that start messy — millions of raw trip records, 24,000 unstructured
-            fragrance descriptions, inconsistent government inspection strings — and end with
-            something clean, fast, and useful. I care as much about
-            <span class="syn-string">"why"</span> a pattern exists as I do about shipping the pipeline that finds it.
+            Outside of class and research, I play soccer, run, and work out, and I'm into video
+            games, anime, and movies. I also build PCs (five for friends so far) and keep up with
+            tech news. I'm looking for data science, ML, and data engineering co-op opportunities.
           </p>
+          <span class="dialog-next">&#9660;</span>
         </div>
-        <div class="about-card reveal">
-          <div class="info-card">
-            <div class="card-bar">
-              <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-              <span class="card-filename">profile.json</span>
-            </div>
-            <div class="info-body">
-              <div class="info-row"><span class="syn-keyword">"education"</span>: <span class="syn-string">"B.S. Data Science, Drexel"</span>,</div>
-              <div class="info-row"><span class="syn-keyword">"focus"</span>: <span class="syn-string">"ML/NLP, Data Engineering, Analytics"</span>,</div>
-              <div class="info-row"><span class="syn-keyword">"location"</span>: <span class="syn-string">"Philadelphia, PA"</span>,</div>
-              <div class="info-row"><span class="syn-keyword">"status"</span>: <span class="syn-string">"open_to_coop"</span></div>
-            </div>
+        <div class="screen profile-card reveal">
+          <div class="lcd-bar"><span>PROFILE</span><span>&#9733;</span></div>
+          <dl>
+            <div><dt>EDUCATION</dt><dd>B.S. Computer Science, Drexel</dd></div>
+            <div><dt>MINORS</dt><dd>Data Science, Economics</dd></div>
+            <div><dt>GRADUATION</dt><dd>June 2029</dd></div>
+            <div><dt>FOCUS</dt><dd>ML/NLP, Data Engineering, Research</dd></div>
+            <div><dt>LOCATION</dt><dd>Philadelphia, PA</dd></div>
+            <div><dt>STATUS</dt><dd class="ok">OPEN TO CO-OP</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <h3 class="sub-title reveal">&#9654; OFF THE CLOCK</h3>
+      <div class="interests">
+        <div class="screen reveal">
+          <div class="lcd-bar"><span>FAVORITES</span><span>&#9733;</span></div>
+          <h4 class="list-title">&#127918; GAMES</h4>
+          <ul class="fav-list">
+            <li>Red Dead Redemption 2</li>
+            <li>Elden Ring</li>
+            <li>Cyberpunk 2077 + Phantom Liberty <span class="tag-new">JUST FINISHED</span></li>
+          </ul>
+          <h4 class="list-title">&#128250; ANIME</h4>
+          <ul class="fav-list">
+            <li>Bleach</li>
+            <li>Naruto</li>
+            <li>Jujutsu Kaisen</li>
+          </ul>
+          <h4 class="list-title">&#127916; MOVIES <span class="list-note">(2026 FAVS)</span></h4>
+          <ul class="fav-list">
+            <li>Minions &amp; Monsters</li>
+            <li>Project Hail Mary</li>
+            <li>Obsession</li>
+            <li>Dune 3 <span class="tag-new">MOST HYPED</span></li>
+          </ul>
+        </div>
+        <div class="screen reveal">
+          <div class="lcd-bar"><span>MOVE SET</span><span>&#9733;</span></div>
+          <div class="moves">
+            <span class="move"><i>&#9917;</i> Soccer</span>
+            <span class="move"><i>&#127939;</i> Running</span>
+            <span class="move"><i>&#127947;&#65039;</i> Working Out</span>
+            <span class="move"><i>&#129336;</i> Calisthenics</span>
+            <span class="move"><i>&#128421;&#65039;</i> PC Building</span>
+            <span class="move"><i>&#128240;</i> Tech News</span>
+            <span class="move"><i>&#127909;</i> Movie Nights</span>
+            <span class="move"><i>&#9997;&#65039;</i> Letterboxd Reviews</span>
           </div>
+          <p class="fun-fact">&#9733; Built 5 PCs for friends, always up to date on the latest tech news, and a big movie watcher who loves writing Letterboxd reviews.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- DEX ENTRIES / PROJECTS -->
   <section id="projects" class="section section-alt">
     <div class="section-inner">
-      <p class="section-eyebrow reveal">// 02 — projects/</p>
+      <p class="section-eyebrow reveal">&#9654; 02 / PROJECT DEX</p>
       <h2 class="section-title reveal">Selected Work</h2>
-      <p class="section-sub reveal">A few things I've built end-to-end — from raw data to deployed product.</p>
+      <p class="section-sub reveal">A few things I've built end-to-end &mdash; from raw data to deployed product.</p>
+
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter is-active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="ml">ML / AI</button>
+        <button class="filter" data-filter="data">DATA</button>
+        <button class="filter" data-filter="research">RESEARCH</button>
+        <button class="filter" data-filter="web">WEB</button>
+      </div>
 
       <div class="project-grid">
 
-        <article class="project-card featured reveal" style="--accent:#4ec9b0;">
-          <div class="card-bar">
-            <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-            <span class="card-filename">scentsync.py</span>
-            <a class="card-link" href="https://github.com/abdullahshaukat2/ScentSync" target="_blank" rel="noopener" aria-label="View code">↗</a>
+        <article class="entry featured reveal" data-cat="ml data" style="--type:#3fa34d;">
+          <header class="entry-head"><span class="dex-no">No.001</span><span class="status s-live">&#9679; DEPLOYED</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#127800;</div>
+            <div>
+              <h3 class="project-name">ScentSync</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-data">Pandas</span><span class="tp t-ml">Sentence-BERT</span><span class="tp t-ml">Scikit-learn</span><span class="tp t-web">Streamlit</span><span class="tp t-ml">NLP</span></div>
+            </div>
           </div>
-          <div class="card-body">
-            <span class="project-tag">## flagship · deployed app</span>
-            <h3 class="project-name">ScentSync</h3>
-            <p class="project-desc">
-              A dual-model fragrance recommender that finds real "dupes" for expensive perfumes.
-              Combines TF-IDF keyword search with Sentence-BERT contextual matching over a cleaned
-              24,000+ fragrance dataset, then runs a 2-stage cosine-similarity detector to surface
-              budget dupes from 6 affordable brands — deployed as a live Streamlit app.
-            </p>
-            <div class="project-metrics">
-              <div class="metric"><span class="metric-num">24k+</span><span class="metric-label">fragrances processed</span></div>
-              <div class="metric"><span class="metric-num">&lt;1s</span><span class="metric-label">startup after caching</span></div>
-              <div class="metric"><span class="metric-num">2</span><span class="metric-label">stage dupe detector</span></div>
+          <p class="project-desc">
+            A dual-model fragrance recommender that finds real "dupes" for expensive perfumes.
+            Combines TF-IDF keyword search with Sentence-BERT contextual matching over a cleaned
+            24,000+ fragrance dataset, then runs a 2-stage cosine-similarity detector to surface
+            budget dupes from 6 affordable brands &mdash; deployed as a live Streamlit app.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">24k+</span><span class="stat-label">fragrances processed</span></div>
+            <div class="stat"><span class="stat-num">&lt;1s</span><span class="stat-label">startup after caching</span></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">stage dupe detector</span></div>
+          </div>
+          <a class="entry-link" href="https://github.com/abdullahshaukat2/ScentSync" target="_blank" rel="noopener">VIEW CODE &#8599;</a>
+        </article>
+
+        <article class="entry reveal" data-cat="ml web" style="--type:#4a90e2;">
+          <header class="entry-head"><span class="dex-no">No.002</span><span class="status s-wip">&#9679; IN PROGRESS</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#128196;</div>
+            <div>
+              <h3 class="project-name">PaperMatch</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-web">FastAPI</span><span class="tp t-data">PostgreSQL/pgvector</span><span class="tp t-web">Next.js</span><span class="tp t-ml">Claude API</span><span class="tp t-data">OpenAlex</span></div>
             </div>
-            <div class="project-stack">
-              <span>Python</span><span>Pandas</span><span>Sentence-BERT</span><span>Scikit-learn</span><span>Streamlit</span><span>NLP</span>
-            </div>
+          </div>
+          <p class="project-desc">
+            An AI research tool that finds papers keyword search misses by following citation
+            graphs. Merges and de-duplicates paper data from 4 scholarly APIs (OpenAlex, arXiv,
+            Semantic Scholar, Crossref) and runs a multi-hop citation traversal that reaches
+            target papers only findable 3 hops from the query.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">4</span><span class="stat-label">scholarly APIs merged</span></div>
+            <div class="stat"><span class="stat-num">3-hop</span><span class="stat-label">citation traversal</span></div>
           </div>
         </article>
 
-        <article class="project-card reveal" style="--accent:#c586c0;">
-          <div class="card-bar">
-            <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-            <span class="card-filename">metro_simulator.py</span>
+        <article class="entry reveal" data-cat="ml data" style="--type:#e0a020;">
+          <header class="entry-head"><span class="dex-no">No.003</span><span class="status s-wip">&#9679; IN PROGRESS</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#128179;</div>
+            <div>
+              <h3 class="project-name">CreditLens</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-data">Pandas</span><span class="tp t-ml">Scikit-learn</span><span class="tp t-ml">XGBoost</span><span class="tp t-ml">SHAP</span><span class="tp t-web">Streamlit</span></div>
+            </div>
           </div>
-          <div class="card-body">
-            <span class="project-tag">## research</span>
-            <h3 class="project-name">Metro Network Simulator</h3>
-            <p class="project-desc">
-              Spatiotemporal simulator modeling 1.1M+ daily journeys across a 147-station metro
-              system. Collapsed unique shortest-path pairs from 1.1M to under 22K, cutting
-              redundant Dijkstra runs and accelerating simulation runtime by 90%+, then modeled
-              trip time (R² = 0.76) to expose gaps between network centrality and real ridership.
-            </p>
-            <div class="project-metrics">
-              <div class="metric"><span class="metric-num">90%+</span><span class="metric-label">faster runtime</span></div>
-              <div class="metric"><span class="metric-num">147</span><span class="metric-label">stations modeled</span></div>
-              <div class="metric"><span class="metric-num">R²=0.76</span><span class="metric-label">trip-time model</span></div>
-            </div>
-            <div class="project-stack">
-              <span>Python</span><span>NetworkX</span><span>Regression</span><span>Graph Theory</span>
-            </div>
+          <p class="project-desc">
+            An ML credit-risk app predicting the probability of credit-card default from 30,000+
+            borrower records. Engineered utilization, payment-ratio, and delinquency features,
+            compared Logistic Regression and XGBoost on ROC-AUC, precision, recall, and F1, and
+            added SHAP + Streamlit to visualize risk factors and simulate credit-profile changes.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">30k+</span><span class="stat-label">borrower records</span></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">models compared</span></div>
+            <div class="stat"><span class="stat-num">SHAP</span><span class="stat-label">explainability</span></div>
           </div>
         </article>
 
-        <article class="project-card reveal" style="--accent:#dcdcaa;">
-          <div class="card-bar">
-            <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-            <span class="card-filename">compliance_db.sql</span>
-            <a class="card-link" href="https://github.com/abdullahshaukat2/NYS-Food-Service-Compliance---Inspection-Database" target="_blank" rel="noopener" aria-label="View code">↗</a>
+        <article class="entry reveal" data-cat="ml research" style="--type:#d7263d;">
+          <header class="entry-head"><span class="dex-no">No.004</span><span class="status s-wip">&#9679; IN PROGRESS</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#128678;</div>
+            <div>
+              <h3 class="project-name">Detecting Cyberattacks in Traffic Systems</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-tool">SUMO/TraCI</span><span class="tp t-data">Pandas</span><span class="tp t-ml">Reinforcement Learning</span><span class="tp t-ml">DQN</span></div>
+            </div>
           </div>
-          <div class="card-body">
-            <span class="project-tag">## data engineering</span>
-            <h3 class="project-name">NYS Food Service Compliance DB</h3>
-            <p class="project-desc">
-              A relational database analyzing NY State food-safety compliance. Normalized 21,000+
-              inspection records into a custom 3NF, 13-table schema built with RedGate Data Modeler,
-              parsing complex violation strings with Oracle SQL and ingesting 19MB of raw data with
-              100% integrity.
-            </p>
-            <div class="project-metrics">
-              <div class="metric"><span class="metric-num">21k+</span><span class="metric-label">records ingested</span></div>
-              <div class="metric"><span class="metric-num">13</span><span class="metric-label">table schema</span></div>
-              <div class="metric"><span class="metric-num">100%</span><span class="metric-label">data integrity</span></div>
-            </div>
-            <div class="project-stack">
-              <span>SQL</span><span>Oracle</span><span>RedGate Data Modeler</span><span>ETL</span>
-            </div>
+          <p class="project-desc">
+            Simulated a city intersection in SUMO and Python to study how hacked sensors disrupt
+            smart traffic lights. Tested DQN and KNN-TD reinforcement learning (KNN-TD cut delays
+            10% vs. fixed timing) on 30 hours of generated traffic data, and is building an anomaly
+            detector to flag hacked sensor data across 3 simulated attack types.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">10%</span><span class="stat-label">delay cut vs. fixed timing</span></div>
+            <div class="stat"><span class="stat-num">30 hrs</span><span class="stat-label">traffic data, 6 scenarios</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">attack types</span></div>
           </div>
         </article>
 
-        <article class="project-card reveal" style="--accent:#569cd6;">
-          <div class="card-bar">
-            <span class="term-dot dot-red"></span><span class="term-dot dot-yellow"></span><span class="term-dot dot-green"></span>
-            <span class="card-filename">stock_dashboard.py</span>
-            <a class="card-link" href="https://github.com/abdullahshaukat2/Stock-Performance-DashBoard" target="_blank" rel="noopener" aria-label="View code">↗</a>
-          </div>
-          <div class="card-body">
-            <span class="project-tag">## analytics</span>
-            <h3 class="project-name">Stock Performance Dashboard</h3>
-            <p class="project-desc">
-              Automated pipeline pulling live data from the Yahoo Finance API to track 8 S&amp;P 500
-              companies across 6 key financial metrics — pivoting long-format data into 27 custom
-              Matplotlib time-series plots and eliminating manual Excel prep entirely.
-            </p>
-            <div class="project-metrics">
-              <div class="metric"><span class="metric-num">27</span><span class="metric-label">time-series plots</span></div>
-              <div class="metric"><span class="metric-num">8</span><span class="metric-label">companies tracked</span></div>
-              <div class="metric"><span class="metric-num">1k+</span><span class="metric-label">rows automated</span></div>
-            </div>
-            <div class="project-stack">
-              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+        <article class="entry reveal" data-cat="data research" style="--type:#a050c8;">
+          <header class="entry-head"><span class="dex-no">No.005</span><span class="status s-done">&#9679; COMPLETE</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#128647;</div>
+            <div>
+              <h3 class="project-name">Metro Network Simulator</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-data">NetworkX</span><span class="tp t-ml">Regression</span><span class="tp t-tool">Graph Theory</span></div>
             </div>
           </div>
+          <p class="project-desc">
+            Spatiotemporal simulator modeling 1.1M+ daily journeys across a 147-station metro
+            system. Collapsed unique shortest-path pairs from 1.1M to under 22K, cutting
+            redundant Dijkstra runs and accelerating simulation runtime by 90%+, then modeled
+            trip time (R&sup2; = 0.76) to expose gaps between network centrality and real ridership.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">90%+</span><span class="stat-label">faster runtime</span></div>
+            <div class="stat"><span class="stat-num">147</span><span class="stat-label">stations modeled</span></div>
+            <div class="stat"><span class="stat-num">R&sup2;=0.76</span><span class="stat-label">trip-time model</span></div>
+          </div>
+        </article>
+
+        <article class="entry reveal" data-cat="data" style="--type:#8b5a2b;">
+          <header class="entry-head"><span class="dex-no">No.006</span><span class="status s-done">&#9679; COMPLETE</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#127869;&#65039;</div>
+            <div>
+              <h3 class="project-name">NYS Food Service Compliance DB</h3>
+              <div class="types"><span class="tp t-data">SQL</span><span class="tp t-data">Oracle</span><span class="tp t-tool">RedGate Data Modeler</span><span class="tp t-data">ETL</span></div>
+            </div>
+          </div>
+          <p class="project-desc">
+            A relational database analyzing NY State food-safety compliance. Normalized 21,000+
+            inspection records into a custom 3NF, 13-table schema built with RedGate Data Modeler,
+            parsing complex violation strings with Oracle SQL and ingesting 19MB of raw data with
+            100% integrity.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">21k+</span><span class="stat-label">records ingested</span></div>
+            <div class="stat"><span class="stat-num">13</span><span class="stat-label">table schema</span></div>
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-label">data integrity</span></div>
+          </div>
+          <a class="entry-link" href="https://github.com/abdullahshaukat2/NYS-Food-Service-Compliance---Inspection-Database" target="_blank" rel="noopener">VIEW CODE &#8599;</a>
+        </article>
+
+        <article class="entry reveal" data-cat="data" style="--type:#2a8fbd;">
+          <header class="entry-head"><span class="dex-no">No.007</span><span class="status s-done">&#9679; COMPLETE</span></header>
+          <div class="entry-main">
+            <div class="sprite">&#128200;</div>
+            <div>
+              <h3 class="project-name">Stock Performance Dashboard</h3>
+              <div class="types"><span class="tp t-lang">Python</span><span class="tp t-data">Pandas</span><span class="tp t-data">NumPy</span><span class="tp t-data">Matplotlib</span></div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Automated pipeline pulling live data from the Yahoo Finance API to track 8 S&amp;P 500
+            companies across 6 key financial metrics &mdash; pivoting long-format data into 27 custom
+            Matplotlib time-series plots and eliminating manual Excel prep entirely.
+          </p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">27</span><span class="stat-label">time-series plots</span></div>
+            <div class="stat"><span class="stat-num">8</span><span class="stat-label">companies tracked</span></div>
+            <div class="stat"><span class="stat-num">1k+</span><span class="stat-label">rows automated</span></div>
+          </div>
+          <a class="entry-link" href="https://github.com/abdullahshaukat2/Stock-Performance-DashBoard" target="_blank" rel="noopener">VIEW CODE &#8599;</a>
         </article>
 
       </div>
+      <p class="no-results" id="noResults" hidden>No entries of that type yet.</p>
 
       <div class="more-projects reveal">
-        <a href="https://github.com/abdullahshaukat2?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">ls -la github.com/abdullahshaukat2 →</a>
+        <a href="https://github.com/abdullahshaukat2?tab=repositories" target="_blank" rel="noopener" class="btn btn-yellow">More on GitHub &#8594;</a>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- BADGES / EXPERIENCE -->
   <section id="experience" class="section">
     <div class="section-inner">
-      <p class="section-eyebrow reveal">// 03 — experience.log</p>
+      <p class="section-eyebrow reveal">&#9654; 03 / BADGE CASE</p>
       <h2 class="section-title reveal">Experience</h2>
 
       <div class="timeline">
         <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
+          <div class="timeline-badge b1">&#128678;</div>
+          <div class="screen timeline-content">
             <div class="timeline-head">
-              <h3>Data Engineering &amp; Analysis Researcher</h3>
-              <span class="timeline-date">Apr 2026 – Present</span>
+              <h3>Researcher</h3>
+              <span class="timeline-date">Sep 2026 &ndash; Present</span>
             </div>
-            <p class="timeline-org">Prof. Zhiwei Chen, Drexel University</p>
+            <p class="timeline-org">VIP: Detecting Cyberattacks in Traffic Systems, Drexel University</p>
+            <ul class="timeline-list">
+              <li>Simulated a city intersection in SUMO and Python to study how hacked sensors disrupt smart traffic lights</li>
+              <li>Tested DQN and KNN-TD reinforcement learning on traffic lights; KNN-TD cut delays 10% vs. fixed timing</li>
+              <li>Generated 30 hours of clean traffic data across 6 scenarios, from light traffic to rush hour</li>
+              <li>Analyzed 100K+ seconds of sensor data in Pandas, defining limits that expose faked sensor readings</li>
+              <li>Building an anomaly detector to flag hacked traffic-sensor data across 3 simulated attack types</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-badge b2">&#128647;</div>
+          <div class="screen timeline-content">
+            <div class="timeline-head">
+              <h3>Data Engineering Researcher</h3>
+              <span class="timeline-date">Apr 2026 &ndash; Sep 2026</span>
+            </div>
+            <p class="timeline-org">CAM Lab, Drexel University (Prof. Zhiwei Chen)</p>
             <ul class="timeline-list">
               <li>Built a spatiotemporal simulator modeling 1.1M+ daily journeys across a 147-station metro system</li>
               <li>Cut unique shortest-path pairs from 1.1M to &lt;22K, accelerating simulation runtime by 90%+</li>
-              <li>Modeled trip time throughout the day (R²=0.76), decomposing it into wait, speed, and dwell</li>
+              <li>Modeled trip time throughout the day (R&sup2;=0.76), decomposing it into wait, speed, and dwell</li>
               <li>Identified gaps between network centrality and real ridership demand across 6 card types</li>
             </ul>
           </div>
         </div>
 
         <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
+          <div class="timeline-badge b3">&#127968;</div>
+          <div class="screen timeline-content">
             <div class="timeline-head">
               <h3>Operations Assistant</h3>
-              <span class="timeline-date">Sep 2025 – Mar 2026</span>
+              <span class="timeline-date">Sep 2025 &ndash; Mar 2026</span>
             </div>
             <p class="timeline-org">Ronald McDonald House Charities</p>
             <ul class="timeline-list">
-              <li>Built Excel-based inventory tracking across 4+ operational areas, improving supply tracking by 30%</li>
-              <li>Analyzed 5 years / 1,000+ family stays to surface seasonal demand and capacity patterns</li>
-              <li>Built a donation analytics dashboard covering $1M+ in contributions to target fundraising</li>
-              <li>Standardized inventory audit templates, cutting supply over-ordering by 20%</li>
+              <li>Built Excel inventory systems across 4+ areas, lifting tracking accuracy by 30% and cutting over-ordering by 20%</li>
+              <li>Analyzed 1,000+ family stays over 5 years, building a demand-peak dashboard that reshaped capacity planning</li>
+              <li>Designed a donation analytics dashboard on $1M+ in gifts, surfacing patterns that retargeted fundraising</li>
             </ul>
           </div>
         </div>
@@ -284,60 +406,65 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- BAG / SKILLS -->
   <section id="skills" class="section section-alt">
     <div class="section-inner">
-      <p class="section-eyebrow reveal">// 04 — skills.json</p>
+      <p class="section-eyebrow reveal">&#9654; 04 / BAG</p>
       <h2 class="section-title reveal">Skills</h2>
 
       <div class="skills-grid">
-        <div class="skill-group reveal" style="--accent:#569cd6;">
-          <h3><span class="syn-keyword">"languages"</span>:</h3>
+        <div class="screen skill-group reveal">
+          <h3>LANGUAGES</h3>
           <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span>
-            <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">C</span>
-            <span class="chip">HTML</span><span class="chip">Visual Basic</span>
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">TypeScript</span>
+            <span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">C</span>
+            <span class="chip">R</span><span class="chip">HTML</span><span class="chip">Visual Basic</span>
           </div>
         </div>
-        <div class="skill-group reveal" style="--accent:#c586c0;">
-          <h3><span class="syn-keyword">"ml_ai"</span>:</h3>
+        <div class="screen skill-group reveal">
+          <h3>ML / AI</h3>
           <div class="chip-row">
-            <span class="chip">NLP</span><span class="chip">Scikit-learn</span><span class="chip">Regression</span>
-            <span class="chip">TF-IDF</span><span class="chip">Sentence-BERT</span><span class="chip">PyTorch</span>
-            <span class="chip">TensorFlow</span><span class="chip">GenAI</span>
+            <span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+            <span class="chip">Reinforcement Learning (DQN)</span><span class="chip">NLP</span>
+            <span class="chip">Sentence-BERT</span><span class="chip">SPECTER2</span><span class="chip">TF-IDF</span>
+            <span class="chip">Regression</span><span class="chip">LLM APIs (Claude)</span><span class="chip">GenAI</span>
           </div>
         </div>
-        <div class="skill-group reveal" style="--accent:#4ec9b0;">
-          <h3><span class="syn-keyword">"libraries"</span>:</h3>
+        <div class="screen skill-group reveal">
+          <h3>FRAMEWORKS &amp; LIBRARIES</h3>
           <div class="chip-row">
-            <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span>
-            <span class="chip">Seaborn</span><span class="chip">NetworkX</span><span class="chip">Streamlit</span>
+            <span class="chip">FastAPI</span><span class="chip">Next.js (React)</span><span class="chip">REST APIs</span>
+            <span class="chip">Streamlit</span><span class="chip">Pandas</span><span class="chip">NumPy</span>
+            <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">SHAP</span>
+            <span class="chip">NetworkX</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span>
           </div>
         </div>
-        <div class="skill-group reveal" style="--accent:#dcdcaa;">
-          <h3><span class="syn-keyword">"tools"</span>:</h3>
+        <div class="screen skill-group reveal">
+          <h3>DATA &amp; TOOLS</h3>
           <div class="chip-row">
-            <span class="chip">Git</span><span class="chip">Oracle SQL</span><span class="chip">STATA</span>
-            <span class="chip">R-Studio</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
-            <span class="chip">Excel / Power Query</span>
+            <span class="chip">PostgreSQL/pgvector</span><span class="chip">Redis</span><span class="chip">Oracle SQL</span>
+            <span class="chip">Docker</span><span class="chip">Git</span><span class="chip">SUMO</span>
+            <span class="chip">Jupyter</span><span class="chip">RStudio</span><span class="chip">Power BI</span>
+            <span class="chip">Tableau</span><span class="chip">Excel / Power Query</span><span class="chip">STATA</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- LINK / CONTACT -->
   <section id="contact" class="section contact-section">
     <div class="section-inner">
-      <p class="section-eyebrow reveal">// 05 — contact.sh</p>
+      <p class="section-eyebrow reveal">&#9654; 05 / LINK CABLE</p>
       <h2 class="section-title reveal">Let's build something with data</h2>
-      <p class="section-sub reveal">
-        Open to data science, ML, and data engineering internships/co-ops. Reach out — I reply fast.
-      </p>
+      <div class="screen dialog reveal">
+        <p>A wild opportunity appeared! Open to data science, ML, and data engineering internships/co-ops. Reach out &mdash; I reply fast.</p>
+        <span class="dialog-next">&#9660;</span>
+      </div>
       <div class="contact-actions reveal">
-        <a href="mailto:as6267@drexel.edu" class="btn btn-primary">mailto: as6267@drexel.edu</a>
-        <a href="https://linkedin.com/in/abdullah--shaukat" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
-        <a href="https://github.com/abdullahshaukat2" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+        <a href="mailto:as6267@drexel.edu" class="btn btn-red">as6267@drexel.edu</a>
+        <a href="https://linkedin.com/in/abdullah--shaukat" target="_blank" rel="noopener" class="btn btn-blue">LinkedIn</a>
+        <a href="https://github.com/abdullahshaukat2" target="_blank" rel="noopener" class="btn btn-yellow">GitHub</a>
       </div>
     </div>
   </section>
@@ -345,7 +472,8 @@
 </main>
 
 <footer class="footer">
-  <p><span class="syn-comment">// built by Abdullah Shaukat</span> · <span id="year"></span> <span class="cursor-blink footer-cursor">▍</span></p>
+  <p>Built by Abdullah Shaukat &middot; <span id="year"></span></p>
+  <p class="fine">Fan-style design with original art. Not affiliated with or endorsed by Nintendo, Game Freak, or The Pok&eacute;mon Company.</p>
 </footer>
 
 <script src="js/script.js"></script>
