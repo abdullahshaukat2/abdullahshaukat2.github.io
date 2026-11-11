@@ -320,6 +320,8 @@ ul { list-style: none; }
   background: #111; color: #fff; padding: 9px 12px; border-radius: 6px; transition: background 0.15s ease;
 }
 .entry-link:hover { background: var(--type); }
+.entry-link-live { background: var(--type); color: #111; margin-right: 8px; }
+.entry-link-live:hover { background: #111; color: #fff; }
 .no-results { font-family: var(--font-pixel); font-size: 0.6rem; margin-top: 20px; }
 .more-projects { margin-top: 56px; text-align: center; }
 
